@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://use.typekit.com/zuj3jdp.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<style type="text/css">
+
+body {
+	background-image: url('brushed_alu.png');
+}
+
+.entriesContainer {
+	width: 800px;
+	margin-left: auto;	
+	margin-right: auto;
+}
+
+.box {
+	border: 1px solid rgba(0, 0, 0, 0.05); 
+	background-color: #fefefe;	
+}
+
+.user {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	height: 130px;
+	padding: 15px;
+}
+
+.user:hover {
+	background: rgba(246, 248, 255, 0.55);
+}
+
+.user:last-child {
+	border-bottom: none;
+}
+
+.user .info, .user .profilePicture {
+	display:  inline-block;
+}
+
+.user .profilePicture {
+	width: 180px;
+	height: 130px;
+	background-color: #000;
+}
+
+.user .info {
+	vertical-align: top;
+	margin-left: 25px;
+}
+
+.user .info h1 {
+	font-family: "vollkorn";
+	font-size: 2.5em;
+	margin: 0px;
+}
+
+.user .info p {
+	margin-top: 8px;
+	font-family: "Arial";
+	font-size: 0.9em;
+	line-height: 1.4em;
+	padding-left: 15px;
+}
+
+.company, .company .header {
+	border-top-left-radius: 15px 15px;
+	border-top-right-radius: 15px 15px;
+}
+
+.company .header {
+	padding: 5px 15px 5px 15px;	
+}
+
+.company .name {
+	vertical-align: middle;
+	display: inline-block;
+	font-weight: 900;
+	font-size: 2.6em;
+}
+
+.company .box > div {
+	display: inline-block;
+}
+
+.company .address {
+	color: grey;
+	font-size: 0.7em;
+	margin-left: 73px;
+}
+
+.entry {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/*box-shadow: 2px 2px 1px #888;	*/
+	border: 1px solid rgba(0, 0, 0, 0.3); 
+}
+
+</style>
+</head>
+
+<body>
+<div class="entriesContainer">
+	<div class="box entry">
+		<div class="box user">
+		</div>
+	</div>
+	<div class="box userContainer entry company">
+		<div class="box header">
+			<div class="name">
+				Quizlet
+			</div>
+			<div class="address">
+				526 2nd Street<br />
+				San Francisco, CA 94107<br />
+			</div>
+		</div>
+	
+		<div class="box user">
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
+		</div>
+		<div class="box user">
+			
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
