@@ -28,7 +28,7 @@ body {
 	border-left: none;
 	border-right: none;
 	height: 130px;
-	padding: 15px;
+	padding: 20px;
 }
 
 .user:hover {
@@ -103,7 +103,7 @@ body {
 }
 
 .map {
-	height: 130px;
+	height: 140px;
 	width: 260px;
 	position: absolute;
 	right: 15px;
@@ -119,11 +119,35 @@ body {
 <script type"text/javascript">
 	var maps;
 $(document).ready(function() {
-	maps = new GMaps({
+	map1 = new GMaps({
 	  div: '#map1',
 	  lat: -12.043333,
-	  lng: -77.028333
+	  lng: -77.028333,
+	  zoom: 13,
+	  mapTypeControl: false,
+		streetViewControl: false,
 	});
+	
+	map1.addMarker({
+	  lat: -12.043333,
+	  lng: -77.028333,
+	  title: 'Lima'
+	});	
+	
+	map1 = new GMaps({
+	  div: '#map2',
+	  lat: -12.043333,
+	  lng: -77.028333,
+	  zoom: 13,
+	  mapTypeControl: false,
+		streetViewControl: false,
+	});
+	
+	map1.addMarker({
+	  lat: -12.043333,
+	  lng: -77.028333,
+	  title: 'Lima'
+	});	
 });
 
 </script>
@@ -142,9 +166,7 @@ $(document).ready(function() {
 					Engineering Intern, Quizlet
 				</p>
 			</div>
-			<div class="map" id="map1">
-			
-			</div>
+			<div class="map" id="map1"></div>
 		</div>
 	</div>
 	<div class="box entry">
@@ -158,6 +180,7 @@ $(document).ready(function() {
 					Engineering Intern, Quizlet
 				</p>
 			</div>
+			<div class="map" id="map2"></div>
 		</div>
 	</div>
 	<div class="box userContainer entry company">
