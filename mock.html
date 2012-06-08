@@ -10,14 +10,17 @@ body {
 }
 
 .entriesContainer {
-	width: 800px;
+	min-width: 1000px;
+	max-width: 1300px;
+	width: 85%;
 	margin-left: auto;	
 	margin-right: auto;
 }
 
 .box {
 	border: 1px solid rgba(0, 0, 0, 0.05); 
-	background-color: #fefefe;	
+	background-color: #fefefe;
+	position: relative;
 }
 
 .user {
@@ -30,6 +33,7 @@ body {
 
 .user:hover {
 	background: rgba(246, 248, 255, 0.55);
+	cursor: pointer;
 }
 
 .user:last-child {
@@ -98,13 +102,62 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.3); 
 }
 
+.map {
+	height: 130px;
+	width: 260px;
+	position: absolute;
+	right: 15px;
+	top:  15px;
+}
+
 </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript"
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBBwR-Ykxj8ATNwGb60_3kkuFxkY7ekl7c&sensor=true">
+</script>
+<script type="text/javascript" src="javascript/gmaps.js"></script>
+<script type"text/javascript">
+	var maps;
+$(document).ready(function() {
+	maps = new GMaps({
+	  div: '#map1',
+	  lat: -12.043333,
+	  lng: -77.028333
+	});
+});
+
+</script>
 </head>
 
 <body>
 <div class="entriesContainer">
 	<div class="box entry">
 		<div class="box user">
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
+			<div class="map" id="map1">
+			
+			</div>
+		</div>
+	</div>
+	<div class="box entry">
+		<div class="box user">
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
 		</div>
 	</div>
 	<div class="box userContainer entry company">
@@ -117,7 +170,17 @@ body {
 				San Francisco, CA 94107<br />
 			</div>
 		</div>
-	
+		<div class="box user">
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
+		</div>	
 		<div class="box user">
 			<div class="profilePicture">
 			</div>
@@ -130,8 +193,27 @@ body {
 			</div>
 		</div>
 		<div class="box user">
-			
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
 		</div>
+		<div class="box user">
+			<div class="profilePicture">
+			</div>
+			<div class="info">
+				<h1>Wylie Conlon</h1>
+				<p>
+					Northeastern University<br />
+					Engineering Intern, Quizlet
+				</p>
+			</div>
+		</div>		
 	</div>
 </div>
 </body>
