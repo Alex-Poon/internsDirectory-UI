@@ -56,7 +56,7 @@ body {
 }
 
 .user .info h1 {
-	font-family: "vollkorn";
+	font-family: "vollkorn",serif;
 	font-size: 2.5em;
 	margin: 0px;
 }
@@ -89,10 +89,18 @@ body {
 	display: inline-block;
 }
 
-.company .address {
+.address {
 	color: grey;
 	font-size: 0.7em;
 	margin-left: 73px;
+}
+
+.singleUser-address {
+	position: absolute; 
+	right: 285px;
+	width:  200px;
+	top:  15px;
+	text-align: right	
 }
 
 .entry {
@@ -102,12 +110,21 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.3); 
 }
 
+/* The rounded is an illusion */
 .map {
 	height: 140px;
 	width: 260px;
 	position: absolute;
 	right: 15px;
 	top:  15px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 3px 3px;	
+}
+
+.multiUserMap {
+	top: 145px;
+	height: 513px;
+	width: 390px;
 }
 
 </style>
@@ -134,7 +151,7 @@ $(document).ready(function() {
 	  title: 'Lima'
 	});	
 	
-	map1 = new GMaps({
+	map2 = new GMaps({
 	  div: '#map2',
 	  lat: -12.043333,
 	  lng: -77.028333,
@@ -143,11 +160,26 @@ $(document).ready(function() {
 		streetViewControl: false,
 	});
 	
-	map1.addMarker({
+	map2.addMarker({
 	  lat: -12.043333,
 	  lng: -77.028333,
 	  title: 'Lima'
 	});	
+	
+map3 = new GMaps({
+  div: '#map3',
+  lat: -12.043333,
+  lng: -77.028333,
+  zoom: 13,
+  mapTypeControl: false,
+	streetViewControl: false,
+});
+
+map3.addMarker({
+  lat: -12.043333,
+  lng: -77.028333,
+  title: 'Lima'
+});		
 });
 
 </script>
@@ -166,6 +198,10 @@ $(document).ready(function() {
 					Engineering Intern, Quizlet
 				</p>
 			</div>
+			<div class="singleUser-address address">
+				526 2nd Street<br />
+				San Francisco, CA 94107
+			</div>
 			<div class="map" id="map1"></div>
 		</div>
 	</div>
@@ -180,6 +216,10 @@ $(document).ready(function() {
 					Engineering Intern, Quizlet
 				</p>
 			</div>
+			<div class="singleUser-address address">
+				526 2nd Street<br />
+				San Francisco, CA 94107
+			</div>			
 			<div class="map" id="map2"></div>
 		</div>
 	</div>
@@ -236,7 +276,8 @@ $(document).ready(function() {
 					Engineering Intern, Quizlet
 				</p>
 			</div>
-		</div>		
+		</div>
+		<div class="multiUserMap map" id="map3"></div>				
 	</div>
 </div>
 </body>
